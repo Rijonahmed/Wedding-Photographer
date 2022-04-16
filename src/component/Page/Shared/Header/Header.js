@@ -8,18 +8,18 @@ const Header = () => {
     <header className='sticky-top'>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand as={Link} to="/">React-Bootstrap</Navbar.Brand>
+          <Navbar.Brand as={Link} to="/">BEST Wedding Photographer</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#features">Features</Nav.Link>
-              <Nav.Link href="#pricing">Pricing</Nav.Link>
+              <Nav.Link as={Link} to="/services">Services</Nav.Link>
+              <Nav.Link as={Link} to="/checkout">CheckOut</Nav.Link>
 
             </Nav>
             <Nav>
               <Nav.Link as={Link} to="/login">LogIn</Nav.Link>
-              <Nav.Link eventKey={2} href="#memes">
-                Dank memes
+              <Nav.Link eventKey={2} as={Link} to="/about">
+                About
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
