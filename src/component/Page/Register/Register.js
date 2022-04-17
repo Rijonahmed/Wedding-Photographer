@@ -4,12 +4,14 @@ import { Button, Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import Loading from '../Loading/Loading';
 import Social from '../Social/Social';
 
 const Register = () => {
   const [displayName, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setpassword] = useState('');
+  const navigate = useNavigate();
 
   const [
     createUserWithEmailAndPassword,
@@ -19,8 +21,11 @@ const Register = () => {
   ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
+  if (loading || updating) {
+    return <Loading></Loading>
+  }
 
-  const navigate = useNavigate();
+
   const navigateHandleLogin = () => {
     navigate('/login');
 

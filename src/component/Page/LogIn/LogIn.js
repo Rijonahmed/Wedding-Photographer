@@ -5,7 +5,11 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-
 import auth from '../../../firebase.init';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './Login.css'
-import { sendPasswordResetEmail } from 'firebase/auth';
+import Loading from '../Loading/Loading';
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 const LogIn = () => {
@@ -26,6 +30,10 @@ const LogIn = () => {
   );
   if (user) {
     navigate(form, { replace: true });
+  }
+
+  if (loading) {
+    return <Loading></Loading>
   }
 
 
@@ -55,8 +63,13 @@ const LogIn = () => {
   }
   const resetPassword = async () => {
 
-    await sendPasswordResetEmail(email);
-    alert('Sent email');
+    if (email) {
+      await sendPasswordResetEmail(email);
+      toast('Sent email');
+    }
+    else {
+      toast('Please Enter your email address')
+    }
 
   }
 
@@ -80,6 +93,8 @@ const LogIn = () => {
       <p className='w-50 mx-auto text-center'>New To Best Wedding PhotoGrapher <span className='text-primary cursor-style' onClick={navigateHandle}> New Creat Account</span></p>
 
       <p className='w-50 mx-auto text-center'>Forget Password<span className='text-danger cursor-style' onClick={resetPassword}> Reset Password</span></p>
+
+      <ToastContainer />
 
       <Social></Social>
 
