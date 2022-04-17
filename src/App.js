@@ -24,6 +24,7 @@ function App() {
         <Route path='/blog' element={<Blog></Blog>}></Route>
 
         <Route path='/services' element={<Services></Services>}></Route>
+        <Route path='/services/:serviceId' element={<Services></Services>}></Route>
         <Route path='/checkout' element={
           <RequireAuth>
             <CheckOut></CheckOut>
