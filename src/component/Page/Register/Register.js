@@ -15,7 +15,7 @@ const Register = () => {
 
   const [
     createUserWithEmailAndPassword,
-    user,
+
     loading,
     error,
   ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
@@ -50,7 +50,7 @@ const Register = () => {
 
   }
   let errorElement;
-  if (updateError) {
+  if (updateError || error) {
     errorElement = (
       <div>
         <p>Error: {error.message}</p>

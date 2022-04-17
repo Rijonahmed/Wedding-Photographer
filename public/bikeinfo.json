@@ -1,20 +1,41 @@
 [
   {
     "id": "1",
-    "name": "Yamaha r15 v3",
-    "price": "470,000 TK",
-    "images": "https://www.banglamotor.net/images/yamaha/yamaha-r15-v3-monster-image1.jpg"
+    "name": "Regular Service ",
+    "price": "Only 7500/- TAKA",
+    "text1": "1 Photographer Senior",
+    "text2": "1 Cinematographer Senior",
+    "text3": "1 Trailer(3Mins) ",
+    "text4": "1 Promo & ",
+    "text5": "1 Full Movie (30-40Mins)",
+    "text6": "50 Copy 4r Prints",
+    "text7": "Unlimited Raw, Unlimited Edit",
+    "images": "https://images.unsplash.com/photo-1517489878335-69b81b6ec993?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
   },
   {
     "id": "2",
-    "name": "HONDA cbr",
-    "price": "540,000 TK",
-    "images": "https://www.banglamotor.net/images/honda/honda-cbr150r-f01.jpg"
+    "name": "Premium Service",
+    "price": "Only 14,500/- TAKA",
+    "text1": "1 Photographer Senior",
+    "text2": "1 Cinematographer Senior",
+    "text3": "2 Trailer (3Mins) ",
+    "text4": "2 Promo & ",
+    "text5": "2 Full Movie (30-40Mins)",
+    "text6": "100 Copy 4r Prints With Photo Album",
+    "text7": "Unlimited Raw, Unlimited Edit",
+    "images": "https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTN8fHdlZGRpbmclMjBwaG90b2dyYXBoZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
   },
   {
     "id": "3",
-    "name": "Suzuki Gixxer SF",
-    "price": "219,950 TK",
-    "images": "https://www.banglamotor.net/images/suzuki/suzuki-gixxer-sf-old-first1.jpg"
+    "name": "Super Premium Service",
+    "price": "Only 27,000/- TAKA",
+    "text1": "1 Photographer Senior",
+    "text2": "1 Cinematographer Senior",
+    "text3": "4 Trailer (3Mins) ",
+    "text4": "4 Promo & ",
+    "text5": "4 Full Movie (30-40Mins)",
+    "text6": "200 Copy 4r Prints With Photo Album",
+    "text7": "Unlimited Raw, Unlimited Edit",
+    "images": "https://images.unsplash.com/photo-1629756048377-09540f52caa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80"
   }
 ]
