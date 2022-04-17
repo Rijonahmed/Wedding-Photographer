@@ -7,12 +7,12 @@ const Services = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    fetch('bikeinfo.json')
+    fetch('service-info.json')
       .then(res => res.json())
       .then(data => setServices(data))
   }, [])
   return (
-    <div>
+    <div className='container'>
       <h2 className='services-title my-3'>Services </h2>
       <div className="services-container">
         {

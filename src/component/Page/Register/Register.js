@@ -16,6 +16,7 @@ const Register = () => {
   const [
     createUserWithEmailAndPassword,
 
+    user,
     loading,
     error,
   ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
@@ -23,6 +24,9 @@ const Register = () => {
 
   if (loading || updating) {
     return <Loading></Loading>
+  }
+  if (user) {
+
   }
 
 
@@ -53,7 +57,7 @@ const Register = () => {
   if (updateError || error) {
     errorElement = (
       <div>
-        <p>Error: {error.message}</p>
+        <p className='text-danger w-50 mx-auto mt-2 text-center'>Error: {error.message}</p>
       </div>
     );
   }
