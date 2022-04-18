@@ -4,7 +4,7 @@ import './App.css';
 import About from './component/Page/About/About';
 import Blog from './component/Page/Blog/Blog';
 import CheckOut from './component/Page/CheckOut/CheckOut';
-import DetailService from './component/Page/Home/DetailService/DetailService';
+
 import Home from './component/Page/Home/Home/Home';
 
 import Services from './component/Page/Home/Services/Services';
@@ -25,7 +25,12 @@ function App() {
         <Route path='/blog' element={<Blog></Blog>}></Route>
 
         <Route path='/services' element={<Services></Services>}></Route>
-        <Route path='/services/:serviceId' element={<DetailService></DetailService>}></Route>
+        <Route path='/services/checkout/:serviceId' element={
+          <RequireAuth>
+            <CheckOut></CheckOut>
+          </RequireAuth>
+        }
+        ></Route>
         <Route path='/checkout' element={
           <RequireAuth>
             <CheckOut></CheckOut>

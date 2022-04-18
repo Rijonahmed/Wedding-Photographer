@@ -2,5 +2,10 @@
   border-radius: 50%;
   width: 300px;
   height: 300px;
+  box-shadow: 20px 20px 20px 0 rgba(0, 0, 0, 0.2);
 
+}
+
+body {
+  background: rgba(230, 214, 214, 0.308);
 }

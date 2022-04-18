@@ -85,7 +85,7 @@ const LogIn = () => {
         </Form.Group>
 
         <Button className='w-100' variant="primary" type="submit">
-          Submit
+          Log In
         </Button>
       </Form>
       {errorElement}

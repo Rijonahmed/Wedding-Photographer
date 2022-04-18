@@ -1,14 +1,14 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import './Service.css'
 
 const Service = ({ service }) => {
-  const { id, name, price, images, text1, text2, text3, text4, text5, text6, text7 } = service;
+  const { name, price, images, text1, text2, text3, text4, text5, text6, text7 } = service;
   const navigate = useNavigate();
-  const handleBtnTitle = id => {
+  const handleBtnTitle = (name) => {
 
-    navigate(`/services/${id}`);
+    navigate(`/services/checkout/${name}`);
 
 
   };
@@ -31,10 +31,10 @@ const Service = ({ service }) => {
 
 
 
-      <Link to='/checkout'>
 
-        <button onClick={() => handleBtnTitle(id)} className='btn btn-primary'> Check Out: {name}</button>
-      </Link>
+
+      <button onClick={() => handleBtnTitle(name)} className='btn btn-primary'> Check Out: {name}</button>
+
 
 
     </div>

@@ -82,7 +82,7 @@ const Register = () => {
         </Form.Group>
 
         <Button className='w-100' variant="primary" type="submit">
-          Submit
+          Register
         </Button>
       </Form>
       {errorElement}
