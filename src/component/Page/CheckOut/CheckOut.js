@@ -7,6 +7,8 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
 
 
 const CheckOut = () => {
@@ -15,11 +17,10 @@ const CheckOut = () => {
 
   const data = ServicesData.filter(name => name.id === serviceId)
   const singleData = (data[0]);
-  console.log(serviceId)
-
-  console.log(data)
-  console.log(singleData)
   const { name, price, images, text1, text2, text3, text4, text5, text6, text7 } = singleData;
+
+  const [user] = useAuthState(auth);
+  console.log(user)
 
 
 
@@ -40,20 +41,27 @@ const CheckOut = () => {
         <p>{text5}</p>
         <p>{text6}</p>
         <p>{text7}</p>
+
       </div>
       <div>
-        <Form>
+
+        <Form className='mt-5'>
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formGridEmail">
               <Form.Label>Email</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" />
+              <Form.Control type="email" value={user.email} />
             </Form.Group>
 
             <Form.Group as={Col} controlId="formGridPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" />
+              <Form.Label>Name</Form.Label>
+              <Form.Control type="name" value={user.displayName
+              } />
             </Form.Group>
           </Row>
+          <Form.Group as={Col} controlId="formGridNumber">
+            <Form.Label>Phone</Form.Label>
+            <Form.Control type="number" placeholder='type phone number' />
+          </Form.Group>
 
           <Form.Group className="mb-3" controlId="formGridAddress1">
             <Form.Label>Address</Form.Label>
