@@ -83,7 +83,7 @@ const CheckOut = () => {
               <Form.Label>State</Form.Label>
               <Form.Select defaultValue="Choose...">
                 <option>Choose...</option>
-                <option>...</option>
+                <option>Bangladesh</option>
               </Form.Select>
             </Form.Group>
 
